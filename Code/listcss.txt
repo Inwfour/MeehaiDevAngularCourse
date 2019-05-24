@@ -1,0 +1,15 @@
+thead {
+    background-color: aliceblue;
+}
+
+tbody {
+    background-color: white;
+}
+
+th {
+    text-align: center;
+}
+
+a {
+    cursor: pointer;
+}

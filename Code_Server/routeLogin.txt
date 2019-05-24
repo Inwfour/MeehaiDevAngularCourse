@@ -1,0 +1,18 @@
+route.post('/login', (req,res,next) => {
+    User.findOne({
+        email:req.body.email
+    }).exec().then((doc) => {
+        if(doc) {
+            if(doc.isValid(req.body.password)) {
+                var token = jwt.sign({ username: doc.username }, 'secret', {expiresIn:'3h'});
+                return res.status(200).json(token);
+            } else {
+                return res.status(501).json({message:'error3'})
+            }
+        }else {
+            return res.status(501).json({message:'error2'})
+        }
+    }).catch((err) => {
+        return res.status(501).json({message:'error1'})
+    })
+});

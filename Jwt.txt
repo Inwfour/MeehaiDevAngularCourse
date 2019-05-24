@@ -1,0 +1,3 @@
+npm i bryptjs cors jsonwebtoken
+
+app.use('/users', userController);

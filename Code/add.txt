@@ -1,0 +1,18 @@
+﻿<div class="container text-center" style="margin-top: 20px">
+    <form>
+      <label>name menu</label>
+      <input type="text" class="form-control" placeholder="name menu ..." formControlName="name"/>
+      <br>
+      <label>type</label>
+      <select class="browser-default custom-select" formControlName="type" class="form-control" >
+          <option value="...">...</option>
+          <option value="...">...</option>
+          <option value="...">...</option>
+        </select>
+      <br>
+      <label>price</label>
+      <input type="number" class="form-control" placeholder="price ..." formControlName="number"/>
+      <button class="btn btn-primary form-control" type="submit">save menu</button>
+      <button class="btn btn-primary form-control" type="submit">edit menu</button>
+    </form>
+  </div>
